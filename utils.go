@@ -1,6 +1,7 @@
 package sipuni_api_wrapper
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -40,6 +41,7 @@ func parseCSVResponse(byteArray []byte) ([]Record, error) {
 			continue
 		}
 		if fields[14] != "" {
+			fmt.Println(fields[14])
 			continue
 		}
 		record := Record{
