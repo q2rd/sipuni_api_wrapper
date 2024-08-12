@@ -1,4 +1,4 @@
-package sipuni_wrapper
+package sipuni_api_wrapper
 
 import (
 	"strings"
@@ -37,6 +37,9 @@ func parseCSVResponse(byteArray []byte) ([]Record, error) {
 	for _, line := range sortedList {
 		fields := strings.Split(line, ";")
 		if len(fields) < minFieldCount {
+			continue
+		}
+		if fields[14] != "" {
 			continue
 		}
 		record := Record{

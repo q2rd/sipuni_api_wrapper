@@ -1,4 +1,4 @@
-package sipuni_wrapper
+package sipuni_api_wrapper
 
 import (
 	"crypto/md5"
